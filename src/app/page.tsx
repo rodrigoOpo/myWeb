@@ -3,7 +3,7 @@ import Hero from "./(sectionsHome)/Hero";
 
 export default function Home() {
   return (
-   <div className="pt-15">
+   <div>
     <Hero />
    </div>
   );
