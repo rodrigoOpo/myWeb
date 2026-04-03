@@ -1,4 +1,3 @@
-import React from 'react'
 import Image from 'next/image'
 
 //some kind of animation like a roket landing on the moon or an astronaut 
@@ -25,6 +24,7 @@ const Hero = (props: Props) => {
         alt="the moon"
         width={400}
         height={400}
+        loading='eager'
         className='mt-30 ml-40'
         />
       </div>
