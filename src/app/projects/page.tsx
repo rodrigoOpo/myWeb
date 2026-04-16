@@ -1,9 +1,7 @@
 "use client"
 
-import React from 'react'
 import Card from '@/ui/Card'
 import { useQuery } from '@tanstack/react-query'
-import { Project } from 'next/dist/build/swc/types'
 
 type Props = {}
 
@@ -19,10 +17,14 @@ const Projects = (props: Props) => {
 
   return (
     <div className='pt-15 bg-gray-800 h-svh'>
-      <div className='grid grid-cols-2 gap-4'>
-        <ul>
+      <div>
+        <ul 
+        className='m-2 md:m-4 lg:m-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6'>
           {data.map(({title, description, image_url}:{title:string, description:string, image_url:string})=>(
-            <li key={title}>
+            <li 
+            key={title}
+            className='w-full'
+            >
               <Card title={title} desc={description} image={image_url}/>
             </li>
           ))}
