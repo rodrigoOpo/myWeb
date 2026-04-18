@@ -1,4 +1,5 @@
 import HeroText from '@/ui/HeroText'
+import ParallaxBackground from '@/ui/ParallaxBackground'
 
 //some kind of animation like a roket landing on the moon or an astronaut 
 // or the star could be could to be added in the future
@@ -12,6 +13,7 @@ const Hero = (props: Props) => {
     <section
     className='flex items-start justify-center md:items-start md:justify-start min-h-screen overflow-hidden c-space'>
       <HeroText />
+      <ParallaxBackground />
     </section>
   )
 }

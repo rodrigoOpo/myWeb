@@ -16,7 +16,7 @@ const Projects = (props: Props) => {
     if (isError) return <p>Error: {error.message}</p>;
 
   return (
-    <div className='pt-15 bg-gray-800 h-svh'>
+    <div className='pt-15 bg-black/50 h-svh'>
       <div>
         <ul 
         className='m-2 md:m-4 lg:m-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6'>

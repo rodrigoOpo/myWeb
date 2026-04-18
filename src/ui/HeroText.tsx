@@ -19,7 +19,7 @@ const HeroText = (props: Props) => {
         <div
         className='flex-col hidden md:flex c-space'>
             <motion.h1 
-            className='text-4xl font-medium'
+            className='text-4xl font-medium text-white'
             variants={variants}
             initial="hidden"
             animate="visible"
@@ -45,7 +45,7 @@ const HeroText = (props: Props) => {
                 transition={{delay:1.5}}>
                     <FlipWords
                     words={Words}
-                    className="font-black text-black text-8xl"
+                    className="font-black text-white text-8xl"
                     />
                 </motion.div>
                 <motion.p 
@@ -62,12 +62,12 @@ const HeroText = (props: Props) => {
         <div
         className="flex flex-col space-y-6 md:hidden">
             <motion.p 
-            className="text-4xl font-medium"
+            className="text-4xl font-medium text-white"
             variants={variants}
                 initial="hidden"
                 animate="visible"
                 transition={{delay:1}}>
-                Hola soy Rodrigo
+                HOLA, SOY
             </motion.p>
             <div>
                 <motion.p 
@@ -76,7 +76,15 @@ const HeroText = (props: Props) => {
                 initial="hidden"
                 animate="visible"
                 transition={{delay:1.2}}>
-                    Creando
+                    Rodrigo
+                </motion.p>
+                <motion.p 
+                className="text-4xl font-black text-neutral-300"
+                variants={variants}
+                initial="hidden"
+                animate="visible"
+                transition={{delay:1.7}}>
+                    Un desarrollador dedicado a crear
                 </motion.p>
                 <motion.div
                 variants={variants}
@@ -85,16 +93,8 @@ const HeroText = (props: Props) => {
                 transition={{delay:1.5}}>
                     <FlipWords
                     words={Words}
-                    className="font-bold text-7xl"/>
+                    className="font-bold text-white text-7xl"/>
                 </motion.div>
-                <motion.p 
-                className="text-4xl font-black text-neutral-300"
-                variants={variants}
-                initial="hidden"
-                animate="visible"
-                transition={{delay:1.7}}>
-                    Aplicaciones Web
-                </motion.p>
             </div>
         </div>
     </div>
