@@ -1,0 +1,57 @@
+"use client"
+
+import React, { useState } from 'react'
+import { motion, AnimatePresence } from 'motion/react'
+
+type Props = {}
+
+const CopyEmailButton = (props: Props) => {
+
+    const [copied, setCopied] = useState(false);
+    const email = "rodrioppo2006@gmail.com"
+    const copyToClipboard = () => {
+        navigator.clipboard.writeText(email)
+        setCopied(true)
+
+        setTimeout(() => {
+            setCopied(false)
+        }, 2000)
+    }
+
+  return (
+    <motion.button
+    onClick={copyToClipboard}
+    whileHover={{y:-5}}
+    whileTap={{scale:1.1}}
+    className='relative px-1 py-4 text-sm text-center rounded-full font-extralight bg-primary
+    w-48 cursor-pointer overflow-hidden'>
+        <AnimatePresence mode="wait">
+            {copied ? 
+            (<motion.p 
+            className='flex items-center justify-center gap-2'
+            key="copied"
+            initial={{opacity:0, y: -10}}
+            animate={{opacity:1, y:0}}
+            exit={{opacity:0, y:-10}}
+            transition={{duration:0.1, ease:"easeInOut"}}
+            >
+                <img src="/copy-done.svg" alt="copiado" className='w-5'/>
+                Email copiado
+            </motion.p>):
+            (<motion.p 
+            className='flex items-center justify-center gap-2'
+            key="copy"
+            initial={{opacity:0}}
+            animate={{opacity:1}}
+            exit={{opacity:0}}
+            transition={{duration:0.1}}
+            >
+                <img src="/copy.svg" alt="copia" className='w-5'/>
+                Copiar Email
+            </motion.p>)}
+        </AnimatePresence>
+    </motion.button>
+  )
+}
+
+export default CopyEmailButton
