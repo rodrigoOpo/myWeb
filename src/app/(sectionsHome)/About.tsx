@@ -13,7 +13,7 @@ const About = (props: Props) => {
   const grid2Container = useRef<HTMLDivElement>(null)
   return (
     <section
-    className='sm:px-10 useRef px-5 lg:px-15 min-h-screen mt-20 md:mt-30'>
+    className='sm:px-10 useRef px-5 lg:px-15 min-h-screen mt-20 md:mt-30 mb-10 md:mb-20'>
         <h2 className='text-white'>Sobre Mi</h2>
         <div className='grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12'>
             {/*Grid 1*/}
